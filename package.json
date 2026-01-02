@@ -1,0 +1,40 @@
+{
+    "name": "api_ts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile": "tsc -w",
+        "start": "node program.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "@types/mongoose": "^5.11.96",
+        "body-parse": "^0.1.0",
+        "cors": "^2.8.5",
+        "express": "^5.2.1",
+        "http-status": "^2.1.0",
+        "jsonwebtoken": "^9.0.3",
+        "mongoose": "^9.0.2",
+        "multer": "^2.0.2",
+        "redis": "^5.10.0",
+        "request": "^2.88.2",
+        "ts-node": "^10.9.2"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.19.6",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.6",
+        "@types/http-status": "^0.2.30",
+        "@types/jsonwebtoken": "^9.0.10",
+        "@types/multer": "^2.0.0",
+        "@types/node": "^25.0.3",
+        "@types/redis": "^4.0.10",
+        "@types/request": "^2.48.13",
+        "typescript": "^5.9.3"
+    }
+}

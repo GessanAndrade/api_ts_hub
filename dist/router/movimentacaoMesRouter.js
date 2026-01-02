@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const movimentacaoMesController_1 = require("../controller/movimentacaoMesController");
+const newRouter = express.Router();
+newRouter.route("/api/v1/movimentacaomes").get(movimentacaoMesController_1.default.get);
+newRouter.route("/api/v1/movimentacaomes/:id").get(movimentacaoMesController_1.default.getById);
+newRouter.route("/api/v1/movimentacaomes/search/:term").get(movimentacaoMesController_1.default.search);
+newRouter.route("/api/v1/movimentacaomes").post(movimentacaoMesController_1.default.create);
+newRouter.route("/api/v1/movimentacaomes/:id").put(movimentacaoMesController_1.default.update);
+newRouter.route("/api/v1/movimentacaomes/:id").delete(movimentacaoMesController_1.default.delete);
+exports.default = newRouter;

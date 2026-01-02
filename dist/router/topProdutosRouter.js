@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const topProdutosController_1 = require("../controller/topProdutosController");
+const newRouter = express.Router();
+newRouter.route("/api/v1/topproduto").get(topProdutosController_1.default.get);
+newRouter.route("/api/v1/topproduto/:id").get(topProdutosController_1.default.getById);
+newRouter.route("/api/v1/topproduto/search/:term").get(topProdutosController_1.default.search);
+newRouter.route("/api/v1/topproduto").post(topProdutosController_1.default.create);
+newRouter.route("/api/v1/topproduto/:id").put(topProdutosController_1.default.update);
+newRouter.route("/api/v1/topproduto/:id").delete(topProdutosController_1.default.delete);
+exports.default = newRouter;

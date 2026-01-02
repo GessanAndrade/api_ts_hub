@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const pedidoVendaController_1 = require("../controller/pedidoVendaController");
+const newRouter = express.Router();
+newRouter.route("/api/v1/pedido").get(pedidoVendaController_1.default.get);
+newRouter.route("/api/v1/pedido/:id").get(pedidoVendaController_1.default.getById);
+newRouter.route("/api/v1/pedido/search/:term").get(pedidoVendaController_1.default.search);
+newRouter.route("/api/v1/pedido").post(pedidoVendaController_1.default.create);
+newRouter.route("/api/v1/pedido/:id").put(pedidoVendaController_1.default.update);
+newRouter.route("/api/v1/pedido/:id").delete(pedidoVendaController_1.default.delete);
+exports.default = newRouter;
